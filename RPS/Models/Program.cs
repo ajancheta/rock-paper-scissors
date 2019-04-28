@@ -7,7 +7,9 @@ namespace RockPaperScissors
   {
     static void Main()
     {
-      string inputPlayer, inputCPU;
+
+      string inputPlayer;
+      string inputCPU;
       int randomInt;
 
       bool playAgain = true;
@@ -27,13 +29,14 @@ namespace RockPaperScissors
           inputPlayer = inputPlayer.ToUpper();
 
           Random random = new Random();
-
           randomInt = random.Next(1,4);
 
           switch (randomInt)
           {
             case 1:
+
             inputCPU = "ROCK";
+
             Console.WriteLine("Computer chose ROCK");
             if (inputPlayer == "ROCK")
             {
@@ -52,7 +55,9 @@ namespace RockPaperScissors
             break;
 
             case 2:
+
             inputCPU = "PAPER";
+
             Console.WriteLine("Computer chose PAPER");
             if (inputPlayer == "PAPER")
             {
@@ -65,13 +70,15 @@ namespace RockPaperScissors
             }
             else if (inputPlayer == "SCISSORS")
             {
-              Console.WriteLine("AYYYYY PLAYER WINS!!!");
+              Console.WriteLine("PLAYER WINS!!!");
               playerScore++;
             }
             break;
 
             case 3:
+
             inputCPU = "SCISSORS";
+
             Console.WriteLine("Computer chose SCISSORS");
             if (inputPlayer == "SCISSORS")
             {
@@ -79,7 +86,7 @@ namespace RockPaperScissors
             }
             else if (inputPlayer == "ROCK")
             {
-              Console.WriteLine("AYYYYY PLAYER WINS!!!");
+              Console.WriteLine("PLAYER WINS!!!");
               playerScore++;
             }
             else if (inputPlayer == "PAPER")
@@ -88,7 +95,9 @@ namespace RockPaperScissors
               scoreCPU++;
             }
             break;
+
           default:
+          
             Console.WriteLine("Invalid entry!");
             break;
           }
@@ -109,7 +118,7 @@ namespace RockPaperScissors
 
         }
         Console.WriteLine("Do you want to play again? [Y]es [N]o");
-        string loop = Console.ReadLine();
+        string loop = Console.ReadLine().ToUpper();
         if (loop == "Y")
         {
           playAgain = true;
@@ -118,6 +127,7 @@ namespace RockPaperScissors
         else if (loop == "N")
         {
           playAgain = false;
+          Console.WriteLine("Bye bye!");
         }
         else
         {
