@@ -96,13 +96,15 @@ namespace RockPaperScissors
             }
             break;
 
+          //Not working
           default:
-          
+
             Console.WriteLine("Invalid entry!");
             break;
           }
 
           Console.WriteLine("Player Score: \t{0}\tComputer:\t{1}", playerScore, scoreCPU);
+
         }
 
         if (playerScore == 3)
@@ -117,6 +119,7 @@ namespace RockPaperScissors
         {
 
         }
+
         Console.WriteLine("Do you want to play again? [Y]es [N]o");
         string loop = Console.ReadLine().ToUpper();
         if (loop == "Y")
@@ -134,6 +137,7 @@ namespace RockPaperScissors
 
         }
       }
+
     }
   }
 }
